@@ -1,82 +1,95 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Layout from '../components/layout';
+import Link from 'next/link';
+import Card from '../components/card';
+import { getProjectData } from '../lib/projects';
 
-export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+import fontStyles from '../styles/fonts.module.css';
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+// Icons
+import {
+    FaGithub,
+    FaLinkedin,
+    FaItchIo
+} from 'react-icons/fa';
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
+export async function getStaticProps() {
+    const projectsData = [getProjectData("Test-1"), getProjectData("Test-3"), getProjectData("Test-2")];
+    return {
+        props: {
+            projectsData
+        }
+    }
+}
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
-  )
+export default function Home({ projectsData }) {
+    return (
+        <>
+            <Head>
+                <title>Home | mKidde-dev</title>
+            </Head>
+            <Layout home={true}>
+                <div> {/* Introduction */}
+                    <p className={`${fontStyles.pretitle} font-bold text-blue-400 text-opacity-80`}>Hey there! My name is-</p>
+                    <h1 className={`${fontStyles.title} mb-6 font-extrabold leading-none`}>Mikkel Kidde Thomsen.</h1>
+                    <p className={`${fontStyles.pretitle} font-bold text-blue-400 text-opacity-80`}>And I'm a-</p>
+                    <h2 className={`${fontStyles.subtitle} font-semibold`}>
+                        Software Engineering student, {" "}
+                        <span className="text-white text-opacity-60"> 
+                            at Aalborg University.  
+                        </span>
+                    </h2>
+                </div>
+                <div className="flex my-8"> {/* Link buttons */}
+                    <a href="https://github.com/THEmKidde" className="flex items-center px-3 py-1.5 mr-4 text-md md:text-lg text-white font-semibold bg-white bg-opacity-10 rounded-lg transition-all hover:bg-opacity-20"> 
+                        <span className="text-blue-400 text-opacity-80 mr-2">
+                            <FaGithub className="text-md md:text-lg"/>
+                        </span> 
+                        Github 
+                    </a>
+                    <a href="https://linkedin.com/in/mikkel-kidde-thomsen" className="flex items-center px-3 py-1.5 mr-4 text-md md:text-lg text-white font-semibold bg-white bg-opacity-10 rounded-lg transition-all hover:bg-opacity-20"> 
+                        <span className="text-blue-400 text-opacity-80 mr-2">
+                            <FaLinkedin className="text-md md:text-lg"/>
+                        </span> 
+                        LinkedIn
+                    </a>
+                    <a href="https://mkidde.itch.io/" className="flex items-center px-3 py-1.5 text-md md:text-lg text-white font-semibold bg-white bg-opacity-10 rounded-lg transition-all hover:bg-opacity-20"> 
+                        <span className="text-blue-400 text-opacity-80 mr-2">
+                            <FaItchIo className="text-md md:text-lg"/>
+                        </span> 
+                        Itch.io
+                    </a>
+                </div>
+                <div className="mt-20"> {/* About me */}
+                    <div className="grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2">
+                        <div className="">
+                            <h1 className={`${fontStyles.subtitle} font-bold`}>About me.</h1>
+                            <p className="text-white text-opacity-60">Hello there</p>
+                        </div>
+                        <img className="mt-8 rounded-full mx-auto w-96" src="https://media-exp1.licdn.com/dms/image/C4E03AQHjOAD8BT2iQQ/profile-displayphoto-shrink_800_800/0/1533169031921?e=1631750400&v=beta&t=2d6q5zxPKYY1i678hJICt0mKsUj7tM1UfMAUnRWK5V8" alt="profile image" />
+                    </div>
+                </div>
+                <div className="mt-20"> {/* Projects */}
+                    <div className="pt-4 pb-8 grid grid-cols-1 gap-x-12 gap-y-4 md:grid-cols-2">
+                        <div className="my-4">
+                            <div className="flex justify-between items-center">
+                                <h1 className={`flex items-center ${fontStyles.subtitle} font-bold`}>Projects.</h1>
+                                <Link href="/projects">
+                                    <a className="block md:hidden text-sm font-semibold text-blue-400 text-opacity-80 hover:text-opacity-100"> Explore more &#8594; </a>
+                                </Link>
+                            </div>
+                            <h2 className="text-md md:text-xl text-white text-opacity-60">Here's a few select projects I've worked on.</h2>
+                            <Link href="/projects">
+                                <a className="hidden md:block text-lg font-semibold text-blue-400 text-opacity-80 hover:text-opacity-100"> Explore more &#8594; </a>
+                            </Link>
+                        </div>
+                        <Card project={projectsData[0]} />
+                        <Card project={projectsData[1]} styling={"md:-mt-60 md:mb-60"} />
+                        <Card project={projectsData[2]} />
+                    </div>
+                    
+                </div>
+            </Layout>
+        </>
+    )
 }
