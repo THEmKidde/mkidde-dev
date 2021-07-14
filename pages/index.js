@@ -64,9 +64,11 @@ export default function Home({ projectsData }) {
                     <div className="grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2">
                         <div className="">
                             <h1 className={`${fontStyles.subtitle} font-bold`}>About me.</h1>
-                            <p className="text-white text-opacity-60">Hello there</p>
+                            <p className="text-white text-opacity-60">
+                                Hello there
+                            </p>
                         </div>
-                        <img className="mt-8 rounded-full mx-auto w-96" src="https://media-exp1.licdn.com/dms/image/C4E03AQHjOAD8BT2iQQ/profile-displayphoto-shrink_800_800/0/1533169031921?e=1631750400&v=beta&t=2d6q5zxPKYY1i678hJICt0mKsUj7tM1UfMAUnRWK5V8" alt="profile image" />
+                        <img className="mt-8 rounded-full mx-auto w-96 select-none" src="https://media-exp1.licdn.com/dms/image/C4E03AQHjOAD8BT2iQQ/profile-displayphoto-shrink_800_800/0/1533169031921?e=1631750400&v=beta&t=2d6q5zxPKYY1i678hJICt0mKsUj7tM1UfMAUnRWK5V8" alt="profile image" draggable="false" />
                     </div>
                 </div>
                 <div className="mt-20"> {/* Projects */}
