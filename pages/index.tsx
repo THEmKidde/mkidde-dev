@@ -30,6 +30,12 @@ export default function Home({ projects }) {
                             <FaLinkedin />
                         </a>
                     </div>
+                    <div className="">
+                        ABOUT SHORT
+                    </div>
+                    <div className="">
+                        PROJECTS SHORT
+                    </div>
                 </Container>
             </div>
         </>
