@@ -12,7 +12,7 @@ export default function Contact() {
     const submitContactForm = async event => {
         event.preventDefault()
     
-        const res = await fetch("/api/contact", {
+        const res = await fetch("<emailURL>", {
             body: JSON.stringify({
                 first_name: event.target.first_name.value,
                 last_name: event.target.last_name.value,
