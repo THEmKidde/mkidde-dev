@@ -12,7 +12,7 @@ export default function Contact() {
     const submitContactForm = async event => {
         event.preventDefault()
     
-        const res = await fetch("<emailURL>", {
+        const res = await fetch("", {
             body: JSON.stringify({
                 first_name: event.target.first_name.value,
                 last_name: event.target.last_name.value,
@@ -46,16 +46,26 @@ export default function Contact() {
             <div className="bg-slate-50 h-full min-h-screen">
                 <Container className="pt-40">
                     <h1 className="text-8xl">Contact me</h1>
-                    <h3 className="text-3xl my-8">If you would like to get in touch with me, you can do so...</h3>
+                    <h3 className="text-3xl my-8">If you would like to get in touch with me, you can do so by contacting me through LinkedIn, email or the contact form below.</h3>
                     <div className="flex justify-between mt-12">
                         <div>
-                            <p>Email</p>
-                            <p>LinkedIn</p>
+                            <h3 className="text-2xl mx-3">Information</h3>
+                            <table className="m-3">
+                                <tr>
+                                    <td className="w-24 font-semibold">LinkedIn</td>
+                                    <td><a href="https://www.linkedin.com/in/mikkel-kidde-thomsen/" target="_blank" className="text-sky-600">https://www.linkedin.com/in/mikkel-kidde-thomsen/</a></td>
+                                </tr>
+                                <tr>
+                                    <td className="font-semibold">Email</td>
+                                    <td>mkidde@outlook.dk</td>
+                                </tr>
+                            </table>
+
                         </div>
                         <div className="w-3/5">
                             <form onSubmit={submitContactForm}>
                                 <div className="flex flex-col">
-                                    <h3 className="text-2xl mx-3">Get in touch</h3>
+                                    <h3 className="text-2xl mx-3">Contact form</h3>
                                     <div className="flex">
                                         <InputField type="text" name="first_name" id="first_name" placeholder="First name" label="First name" required={true} />
                                         <InputField type="text" name="last_name" id="last_name" placeholder="Last name" label="Last name" />

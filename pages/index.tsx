@@ -2,14 +2,15 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Container from '../components/Container'
 import Button from '../components/Button'
+import ProjectFrame from '../components/ProjectFrame'
+import { getProjectsFromTitle } from '../lib/mongodb'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import clientPromise from '../lib/mongodb'
 
 function openResumePDF() {
     window.open('MyPDF.pdf', '_blank');
 }
 
-export default function Home({ isConnected }) {
+export default function Home({ projects }) {
     return (
         <>
             <Head>
@@ -35,21 +36,13 @@ export default function Home({ isConnected }) {
     )
 }
 
+
+//{projects.map(project=>{
+//    return <ProjectFrame prop={project} key={project._id} />
+//})}
+
 export async function getServerSideProps(context) {
-    try {
-      // client.db() will be the default database passed in the MONGODB_URI
-      // You can change the database by calling the client.db() function and specifying a database like:
-      // const db = client.db("myDatabase");
-      // Then you can execute queries against your database like so:
-      // db.find({}) or any of the MongoDB Node Driver commands
-      await clientPromise
-      return {
-        props: { isConnected: true },
-      }
-    } catch (e) {
-      console.error(e)
-      return {
-        props: { isConnected: false },
-      }
-    }
-  }
+    const projects = await getProjectsFromTitle(["My second project!", "My first project wuhuu!"]);
+
+    return { props: {projects} }
+}
