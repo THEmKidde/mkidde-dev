@@ -6,13 +6,15 @@ import InputField from '../components/InputField'
 
 import { useState } from 'react'
 
+const formURL = process.env.FORM_URL;
+
 export default function Contact() {
     const [success, setSuccess] = useState(0); // 0: nothing sent yet, 1: failed, 2: success
 
     const submitContactForm = async event => {
         event.preventDefault()
     
-        const res = await fetch("", {
+        const res = await fetch("formURL", {
             body: JSON.stringify({
                 first_name: event.target.first_name.value,
                 last_name: event.target.last_name.value,
