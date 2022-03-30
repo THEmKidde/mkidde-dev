@@ -53,16 +53,17 @@ export default function Contact() {
                         <div>
                             <h3 className="text-2xl mx-3">Information</h3>
                             <table className="m-3">
-                                <tr>
-                                    <td className="w-24 font-semibold">LinkedIn</td>
-                                    <td><a href="https://www.linkedin.com/in/mikkel-kidde-thomsen/" target="_blank" className="text-sky-600">https://www.linkedin.com/in/mikkel-kidde-thomsen/</a></td>
-                                </tr>
-                                <tr>
-                                    <td className="font-semibold">Email</td>
-                                    <td>mkidde@outlook.dk</td>
-                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td className="w-24 font-semibold">LinkedIn</td>
+                                        <td><a href="https://www.linkedin.com/in/mikkel-kidde-thomsen/" target="_blank" className="text-sky-600">https://www.linkedin.com/in/mikkel-kidde-thomsen/</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td className="font-semibold">Email</td>
+                                        <td>mkidde@outlook.dk</td>
+                                    </tr>
+                                </tbody>
                             </table>
-
                         </div>
                         <div className="w-3/5">
                             <form onSubmit={submitContactForm}>
