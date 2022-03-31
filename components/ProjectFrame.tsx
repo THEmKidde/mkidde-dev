@@ -14,8 +14,10 @@ export default function ProjectFrame({ prop }) {
             </div>
             <div className="mx-2 my-1 h-44">
                 <h1 className="text-2xl mb-1 max-w-lg">{prop.title}wululullulu lulul llulul ul ul ulu lulu </h1>
-                <p className="text-base mb-2 overflow-ellipsis">{prop.description}</p>
-                <a href={prop.github_url} target="_blank" className="absolute top-0 z-100 mt-2 text-5xl text-neutral-300 hover:text-cyan-500 duration-100" ><FaGithub /></a>
+                <p className="text-base mb-2 overflow-ellipsis hover:overflow-y-scroll">{prop.description}</p>
+                <a href={prop.github_url} target="_blank" className="absolute top-0 z-100 mt-2 text-5xl text-neutral-700 hover:text-cyan-500 duration-100" >
+                    <FaGithub />
+                </a>
             </div>
         </div>
     )

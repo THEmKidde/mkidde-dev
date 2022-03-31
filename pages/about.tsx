@@ -24,16 +24,9 @@ export default function About() {
                                 learning how to do so 'properly'. 
                             </h2>
                             <p className="text-lg mt-8">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat consectetur mauris ut consectetur. 
-                            Aliquam tortor ex, aliquet et augue sit amet, scelerisque hendrerit nisl. Curabitur gravida orci at augue volutpat luctus. 
-                            Integer et malesuada urna. Aenean non diam ultrices, lacinia justo sed, porttitor libero. 
-                            Nullam consectetur elit pellentesque nisl fermentum, sed sagittis urna placerat. 
-                            Ut facilisis, arcu nec ullamcorper iaculis, elit nisl aliquam erat, id aliquam nisl metus vel justo.
-                            Quisque vitae nisl aliquet, accumsan ligula quis, faucibus neque. Mauris semper sagittis eros, at sollicitudin tellus tristique quis. 
-                            Nulla nisi metus, semper eget venenatis id, tincidunt a elit. Etiam facilisis felis eget dolor porta mattis. 
-                            Vivamus sed ultricies tellus, eu molestie metus. Nullam elit risus, bibendum ac orci sit amet, lobortis pretium dolor. 
-                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam ultrices eu nulla vitae condimentum. 
-                            Nunc non leo vel ligula volutpat pellentesque vitae non tellus.
+                                I love exploring and learning new technologies, furthering my knowledge and improving my skills in the field. 
+                                I mainly focus on backend, but do also enjoy the creative possibilities of frontend developing.
+                                
                             </p>
                         </article>
                         <div className="w-2/5 mx-6 mt-8">

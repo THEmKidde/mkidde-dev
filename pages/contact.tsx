@@ -83,6 +83,8 @@ export default function Contact() {
                                     <Button title="Submit" onClick={null} className="mx-3" />
                                     <p className={(success == 2 ? "block" : "hidden")+" mx-2 self-center text-green-600 text-lg font-semibold"}>Your message has been sent!</p>
                                     <p className={(success == 1 ? "block" : "hidden")+" mx-2 self-center text-red-600 text-lg font-semibold"}>Something went wrong.</p>
+                                    {// add ReCaptcha
+                                    }
                                 </div>
                             </form>
                         </div>
