@@ -38,7 +38,7 @@ export default function Home({ projects }) {
                             so <a href="/about" className="underline font-medium hover:text-cyan-500 duration-100">here</a>.
                         </p>
                         <div className="mt-8 flex justify-center space-x-3">
-                            <Tag title="C sharp"><SiCsharp className="text-lg text-neutral-800"/></Tag>
+                            <Tag title="C#"><SiCsharp className="text-lg text-neutral-800"/></Tag>
                             <Tag title="Java"><SiJava className="text-lg text-neutral-800"/></Tag>
                             <Tag title="Python"><SiPython className="text-lg text-neutral-800"/></Tag>
                             <Tag title="C"><SiC className="text-lg text-neutral-800"/></Tag>
