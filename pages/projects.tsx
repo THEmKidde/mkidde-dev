@@ -15,7 +15,7 @@ export default function Projects({ projects }) {
                 <Container className="pt-40">
                     <h1 className="text-8xl">My projects</h1>
                     <h3 className="text-3xl my-8">Here's a little showcase of some of the projects I've made.</h3>
-                    <div className="grid grid-cols-2">
+                    <div className="pt-3 grid grid-cols-2">
                         {projects.map(project=>{
                             return <ProjectFrame prop={project} key={project._id} />
                         })}
