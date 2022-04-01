@@ -1,3 +1,6 @@
+# Portfolio website
+This projects is my portfolio website created using Next.js, tailwindcss and MongoDB. The website was created from scratch based on my own design. 😎
+
 ## Deploy on Vercel
 
 You can deploy this app to the cloud with [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
