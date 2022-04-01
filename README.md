@@ -1,5 +1,5 @@
 # Portfolio website
-This projects is my portfolio website created using Next.js, tailwindcss and MongoDB. The website was created from scratch based on my own design. 😎
+This project is my portfolio website created using Next.js, tailwindcss and MongoDB. The website was created from scratch based on my own design. 😎
 
 ## Deploy on Vercel
 
