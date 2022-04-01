@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa'
 
 export default function ProjectFrame({ prop }) {
     return (
-        <div className="mx-auto rounded-md bg-white border shadow-md max-w-xl relative mb-12">
+        <div className="mx-auto rounded-md bg-white border shadow-md max-w-xl relative mb-6 md:mb-12">
             <div className="rounded-t-md overflow-hidden">
                 <Image 
                     src={prop.thumbnail_url}

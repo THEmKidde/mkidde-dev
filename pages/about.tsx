@@ -15,7 +15,7 @@ export default function About() {
                     <div className="flex">
                         <article className="md:w-4/5">
                             <h1 className="text-5xl  md:text-8xl">About me</h1>
-                            <h1 className="text-2xl md:text-3xl my-8">Hello, my name is Mikkel Kidde Thomsen</h1>
+                            <h1 className="text-2xl md:text-3xl my-4 md:my-8">Hello, my name is Mikkel Kidde Thomsen</h1>
                             <div className="mx-auto w-4/5 my-8 block md:hidden">
                                 <Image 
                                     src="https://media-exp1.licdn.com/dms/image/C4E03AQGAuBMG8IyIXg/profile-displayphoto-shrink_800_800/0/1645358647477?e=2147483647&v=beta&t=yxGrG4OuBdEtSq95ZLKrPf19pVXLbtNhvjyS7IuWSo0"

@@ -82,12 +82,7 @@ export default function Home({ projects }) {
     )
 }
 
-
-//{projects.map(project=>{
-//    return <ProjectFrame prop={project} key={project._id} />
-//})}
-
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
     const projects = await getProjectsFromTitle(["My second project!", "My first project wuhuu!"]);
 
     return { props: {projects} }
