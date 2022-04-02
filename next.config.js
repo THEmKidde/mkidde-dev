@@ -7,5 +7,6 @@ module.exports = {
         SECRET_PASSPHRASE: process.env.SECRET_PASSPHRASE,
         LOGIN_USERNAME: process.env.LOGIN_USERNAME,
         LOGIN_PASSWORD: process.env.LOGIN_PASSWORD,
+        AUTH_TOKEN: process.env.AUTH_TOKEN,
     }
   }

@@ -3,11 +3,23 @@ import Navbar from "../components/Navbar";
 import Container from "../components/Container";
 import InputField from "../components/InputField";
 import Button from "../components/Button";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import cookieCutter from "cookie-cutter";
 
 import CryptoJS from "crypto-js";
 
+const secret = process.env.SECRET_PASSPHRASE;
+const token = process.env.AUTH_TOKEN;
+
 export default function Login() {
-    const secret = process.env.SECRET_PASSPHRASE;
+    const router = useRouter();
+
+    const checkAuth = () => {
+        if (cookieCutter.get("token")==token) {
+            router.push("/admin");
+        }
+    }
 
     const submitLogin = async event => {
         event.preventDefault();
@@ -28,17 +40,15 @@ export default function Login() {
         });
 
         const result = await res;
-        
+
         if (result.status == 200) {
             // Login attempt succeded
-            console.log("Success");
-            document.getElementById("login_form").reset();
-            const login_message = document.getElementById("login_message");
-            login_message.classList.remove("block");
-            login_message.classList.add("hidden");
+            let dt = new Date();
+            dt.setHours(dt.getHours() + 2);
+            cookieCutter.set("token", token, {expires: dt});
+            router.push("/admin");
         } else {
             // Login attempt failed
-            console.log("Failed");
             const login_message = document.getElementById("login_message")
             login_message.classList.remove("hidden");
             login_message.classList.add("block");
@@ -68,6 +78,12 @@ export default function Login() {
                                     }
                                 </div>
                             </form>
+                            <Image 
+                                src={"https://i.ytimg.com/vi/P7v8PhNKDQk/maxresdefault.jpg"}
+                                width={0}
+                                height={0}
+                                onLoadingComplete={checkAuth}
+                            />
                         </div>
                     </div>
                 </Container>

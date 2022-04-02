@@ -3,17 +3,30 @@ import Navbar from "../components/Navbar";
 import Container from "../components/Container";
 import InputField from "../components/InputField";
 import Button from "../components/Button";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import cookieCutter from "cookie-cutter";
 
 import { useState } from "react";
 
+const token = process.env.AUTH_TOKEN;
+
 export default function Admin() {
     const [success, setSuccess] = useState(0); // 0: nothing sent yet, 1: failed, 2: success
+    const router = useRouter();
+
+    const checkAuth = () => {
+        if (cookieCutter.get("token")!==token) {
+            router.push("/login");
+        }
+    }
 
     const createProject = async event => {
         event.preventDefault();
 
         const res = await fetch("http://localhost:3000/api/createProject", {
             body: JSON.stringify({
+                token: cookieCutter.get("token"),
                 title: event.target.title.value,
                 description: event.target.description.value,
                 thumbnail_url: event.target.thumbnail.value,
@@ -61,6 +74,12 @@ export default function Admin() {
                                     }
                                 </div>
                             </form>
+                            <Image 
+                                src={"https://i.ytimg.com/vi/P7v8PhNKDQk/maxresdefault.jpg"}
+                                width={0}
+                                height={0}
+                                onLoadingComplete={checkAuth}
+                            />
                         </div>
                     </div>
                 </Container>
