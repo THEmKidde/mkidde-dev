@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "api/createProject.js"  ],
   "exclude": [
     "node_modules"
   ]
