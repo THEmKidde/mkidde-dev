@@ -84,7 +84,7 @@ export default function Home({ projects }) {
 }
 
 export async function getServerSideProps() {
-    const projects = await getProjectsFromTitle(["My second project!", "My first project wuhuu!"]);
+    const projects = await getProjectsFromTitle(["hmm", "tester"]);
 
     return { props: {projects} }
 }
