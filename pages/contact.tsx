@@ -70,12 +70,12 @@ export default function Contact() {
                                 <div className="flex flex-col">
                                     <h3 className="text-xl md:text-2xl mx-3">Contact form</h3>
                                     <div className="flex">
-                                        <InputField type="text" name="first_name" id="first_name" placeholder="First name" label="First name" required={true} />
-                                        <InputField type="text" name="last_name" id="last_name" placeholder="Last name" label="Last name" />
+                                        <InputField className="w-1/2" type="text" name="first_name" id="first_name" placeholder="First name" label="First name" required={true} />
+                                        <InputField className="w-1/2" type="text" name="last_name" id="last_name" placeholder="Last name" label="Last name" />
                                     </div>
                                     <div className="flex">
-                                        <InputField type="email" name="email" id="email" placeholder="Email" label="Email" required={true} />
-                                        <InputField type="text" name="company" id="company" placeholder="Company name" label="Company name" />
+                                        <InputField className="w-1/2" type="email" name="email" id="email" placeholder="Email" label="Email" required={true} />
+                                        <InputField className="w-1/2" type="text" name="company" id="company" placeholder="Company name" label="Company name" />
                                     </div>
                                     <InputField type="textarea" name="message" id="message" placeholder="Message" label="Message" required={true} />
                                 </div>
