@@ -42,6 +42,7 @@ export default function Admin() {
         if (result.status == 200) {
             setSuccess(2); // success
             setTimeout(()=>{setSuccess(0)}, 2000)
+            document.getElementById("form").reset();
         } else {
             setSuccess(1); // failed
             setTimeout(()=>{setSuccess(0)}, 2000)
@@ -58,7 +59,7 @@ export default function Admin() {
                 <Container className="pt-32 md:pt-40">
                     <div className="flex">
                         <div className="w-1/2 mx-auto">                            
-                            <form onSubmit={createProject}>
+                            <form onSubmit={createProject} id="form">
                                 <div className="flex flex-col">
                                     <h3 className="text-xl md:text-2xl mx-3">Create new project</h3>
                                     <InputField type="text" name="title" id="title" placeholder="Project title" label="Project title" required={true} />

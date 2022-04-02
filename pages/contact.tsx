@@ -32,6 +32,7 @@ export default function Contact() {
         if (result.status == 200) {
             setSuccess(2); // success
             setTimeout(()=>{setSuccess(0)}, 2000)
+            document.getElementById("form").reset();
         } else {
             setSuccess(1); // failed
             setTimeout(()=>{setSuccess(0)}, 2000)
@@ -66,7 +67,7 @@ export default function Contact() {
                             </table>
                         </div>
                         <div className="md:w-3/5">
-                            <form onSubmit={submitContactForm}>
+                            <form onSubmit={submitContactForm} id="form">
                                 <div className="flex flex-col">
                                     <h3 className="text-xl md:text-2xl mx-3">Contact form</h3>
                                     <div className="flex">
