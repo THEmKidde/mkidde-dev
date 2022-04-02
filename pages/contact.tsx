@@ -12,7 +12,7 @@ export default function Contact() {
     const formURL = process.env.FORM_URL;
 
     const submitContactForm = async event => {
-        event.preventDefault()
+        event.preventDefault();
 
         const res = await fetch(formURL, {
             body: JSON.stringify({
