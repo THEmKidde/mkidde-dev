@@ -10,7 +10,7 @@ export default function Admin() {
     const [success, setSuccess] = useState(0); // 0: nothing sent yet, 1: failed, 2: success
 
     const createProject = async event => {
-        event.preventDefault;
+        event.preventDefault();
 
         const res = await fetch("http://localhost:3000/api/createProject", {
             body: JSON.stringify({
@@ -25,7 +25,7 @@ export default function Admin() {
             method: "POST"
         })
         const result = await res;
-    
+
         if (result.status == 200) {
             setSuccess(2); // success
             setTimeout(()=>{setSuccess(0)}, 2000)
