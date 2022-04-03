@@ -12,9 +12,11 @@ export default function ProjectFrame({ prop }) {
                     height={331}
                 />
             </div>
-            <div className="mx-2 my-1 h-44">
-                <h1 className="text-2xl mb-1 max-w-lg">{prop.title}</h1>
-                <p className="text-base mb-2 overflow-ellipsis hover:overflow-y-scroll">{prop.description}</p>
+            <div className="mx-2 my-1 h-48">
+                <h1 className="text-2xl max-w-lg">{prop.title}</h1>
+                <div className="max-w-full h-36 mb-2 overflow-hidden hover:overflow-y-scroll">
+                    <p className="text-base whitespace-pre-wrap stable-scrollbar">{prop.description}</p>
+                </div>
                 <a href={prop.github_url} target="_blank" className="absolute top-0 z-100 mt-2 text-5xl text-neutral-700 hover:text-cyan-500 duration-100" >
                     <FaGithub />
                 </a>
