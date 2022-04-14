@@ -28,7 +28,7 @@ export default function Login() {
         const username = CryptoJS.AES.encrypt(event.target.username.value, secret);
         const password = CryptoJS.AES.encrypt(event.target.password.value, secret);
 
-        const res = await fetch("http://localhost:3000/api/login", {
+        const res = await fetch("https://mkidde-dev.vercel.app/api/login", {
             body: JSON.stringify({
                 username: username.toString(),
                 password: password.toString(),
