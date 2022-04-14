@@ -24,7 +24,7 @@ export default function Admin() {
     const createProject = async event => {
         event.preventDefault();
 
-        const res = await fetch("http://localhost:3000/api/createProject", {
+        const res = await fetch("https://mkidde-dev.vercel.app/api/createProject", {
             body: JSON.stringify({
                 token: cookieCutter.get("token"),
                 title: event.target.title.value,
