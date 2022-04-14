@@ -64,7 +64,7 @@ export default function Admin() {
                                     <h3 className="text-xl md:text-2xl mx-3">Create new project</h3>
                                     <InputField type="text" name="title" id="title" placeholder="Project title" label="Project title" required={true} />
                                     <InputField type="textarea" name="description" id="description" placeholder="Project description" label="Project description" required={true} />
-                                    <InputField type="text" name="thumbnail" id="thumbnail" placeholder="Thumbnail url" label="Thumbnaul url" required={true}/>
+                                    <InputField type="text" name="thumbnail" id="thumbnail" placeholder="Thumbnail url" label="Thumbnail url" required={true}/>
                                     <InputField type="text" name="github" id="github" placeholder="Github repo url" label="Github repo url" required={true}/>
                                 </div>
                                 <div className="flex">
