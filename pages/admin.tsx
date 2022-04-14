@@ -41,8 +41,8 @@ export default function Admin() {
 
         if (result.status == 200) {
             setSuccess(2); // success
-            setTimeout(()=>{setSuccess(0)}, 2000)
-            document.getElementById("form").reset();
+            setTimeout(()=>{setSuccess(0)}, 2000);
+            (document.getElementById("form") as HTMLFormElement).reset();
         } else {
             setSuccess(1); // failed
             setTimeout(()=>{setSuccess(0)}, 2000)
