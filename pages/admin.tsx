@@ -31,6 +31,7 @@ export default function Admin() {
                 description: event.target.description.value,
                 thumbnail_url: event.target.thumbnail.value,
                 github_url: event.target.github.value,
+                itchio_url: event.target.itchio.value
             }),
             headers: {
                 "Content-Type": "application/json"
@@ -66,6 +67,7 @@ export default function Admin() {
                                     <InputField type="textarea" name="description" id="description" placeholder="Project description" label="Project description" required={true} />
                                     <InputField type="text" name="thumbnail" id="thumbnail" placeholder="Thumbnail url" label="Thumbnail url" required={true}/>
                                     <InputField type="text" name="github" id="github" placeholder="Github repo url" label="Github repo url" required={true}/>
+                                    <InputField type="text" name="itchio" id="itchio" placeholder="Itch.io url" label="Itch.io url" required={false}/>
                                 </div>
                                 <div className="flex">
                                     <Button title="Create project" onClick={null} className="mx-3" />
