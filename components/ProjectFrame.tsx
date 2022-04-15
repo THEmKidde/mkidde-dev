@@ -14,12 +14,14 @@ export default function ProjectFrame({ prop }) {
             </div>
             <div className="mx-2 my-1 h-48">
                 <h1 className="text-2xl max-w-lg">{prop.title}</h1>
-                <div className="max-w-full h-36 mb-2 overflow-hidden hover:overflow-y-scroll">
+                <div className="max-w-full h-36 mb-2 pr-2 overflow-hidden hover:overflow-y-scroll hover:pr-0">
                     <p className="text-base whitespace-pre-wrap stable-scrollbar">{prop.description}</p>
                 </div>
-                <a href={prop.github_url} target="_blank" className="absolute top-0 z-100 mt-2 text-5xl text-neutral-700 hover:text-cyan-500 duration-100" >
-                    <FaGithub />
-                </a>
+                <div className="absolute top-0 z-100 mt-2 bg-slate-100 p-1 rounded-full">
+                    <a href={prop.github_url} target="_blank" className="text-5xl text-neutral-700 hover:text-cyan-500 duration-100" >
+                        <FaGithub />
+                    </a>
+                </div>
             </div>
         </div>
     )
