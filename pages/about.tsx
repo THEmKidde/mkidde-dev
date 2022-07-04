@@ -30,10 +30,10 @@ export default function About() {
                                 />
                             </div>
                             <h2 className="text-lg md:text-xl">
-                                I'm a software engineering student studying at 
-                                Aalborg University, currently on my 6th semester. 
+                                I'm a software engineer with a BSc from
+                                Aalborg University. 
                                 I've been programming for around 7 years now, and 
-                                have for the last 3 been studying at University 
+                                have for the last 3, been studying at University 
                                 learning how to do so 'properly'. 
                             </h2>
                             <p className="text-base md:text-lg mt-8">
