@@ -1,7 +1,6 @@
 import CryptoJS from "crypto-js"
 
 const secret = process.env.SECRET_PASSPHRASE;
-const token = process.env.AUTH_TOKEN;
 
 const USERNAME = process.env.LOGIN_USERNAME;
 const PASSWORD = process.env.LOGIN_PASSWORD;

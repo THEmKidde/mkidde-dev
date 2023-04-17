@@ -6,8 +6,8 @@ import ProjectFrame from '../components/ProjectFrame'
 import Tag from '../components/Tag'
 import Link from 'next/link'
 import { getProjectsFromTitle } from '../lib/mongodb'
-import { FaGithub, FaLinkedin, FaDatabase } from 'react-icons/fa'
-import { SiCsharp, SiJava, SiJavascript, SiPython, SiTypescript, SiC, SiNextdotjs, SiReact, SiDocker, SiGit, SiNodedotjs, SiUnity, SiMongodb } from 'react-icons/si'
+import { FaGithub, FaLinkedin, FaDatabase, FaJava } from 'react-icons/fa'
+import { SiCsharp, SiJavascript, SiPython, SiTypescript, SiC, SiNextdotjs, SiReact, SiDocker, SiGit, SiNodedotjs, SiUnity, SiMongodb } from 'react-icons/si'
 
 export default function Home({ projects }) {
     return (
@@ -40,7 +40,7 @@ export default function Home({ projects }) {
                         </p>
                         <div className="mt-8 flex flex-wrap justify-center space-x-3 space-y-1">
                             <Tag title="C#" className="mt-1"><SiCsharp className="text-lg text-neutral-800"/></Tag>
-                            <Tag title="Java"><SiJava className="text-lg text-neutral-800"/></Tag>
+                            <Tag title="Java"><FaJava className="text-lg text-neutral-800"/></Tag>
                             <Tag title="Python"><SiPython className="text-lg text-neutral-800"/></Tag>
                             <Tag title="C"><SiC className="text-lg text-neutral-800"/></Tag>
                             <Tag title="JavaScript"><SiJavascript className="text-lg text-neutral-800"/></Tag>

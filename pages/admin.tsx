@@ -79,6 +79,7 @@ export default function Admin() {
                             </form>
                             <Image 
                                 src={"https://i.ytimg.com/vi/P7v8PhNKDQk/maxresdefault.jpg"}
+                                alt={"thumbnail"}
                                 width={0}
                                 height={0}
                                 onLoadingComplete={checkAuth}

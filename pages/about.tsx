@@ -3,8 +3,8 @@ import Navbar from '../components/Navbar'
 import Container from '../components/Container'
 import Tag from '../components/Tag'
 import Image from 'next/image'
-import { FaDatabase } from 'react-icons/fa'
-import { SiCsharp, SiJava, SiJavascript, SiPython, SiTypescript, SiC, SiNextdotjs, SiReact, SiDocker, SiGit, SiNodedotjs, SiUnity, SiMongodb } from 'react-icons/si'
+import { FaDatabase, FaJava } from 'react-icons/fa'
+import { SiCsharp, SiJavascript, SiPython, SiTypescript, SiC, SiNextdotjs, SiReact, SiDocker, SiGit, SiNodedotjs, SiUnity, SiMongodb } from 'react-icons/si'
 
 export default function About() {
     return (
@@ -42,7 +42,7 @@ export default function About() {
                                 in less OOP based languages such as Python and JavaScript, as well as some useful tools and frameworks listed below.   <br />
                                 <div className="mt-4 flex flex-wrap justify-center space-x-3 space-y-1">
                                     <Tag title="C#" className="mt-1"><SiCsharp className="text-lg text-neutral-800"/></Tag>
-                                    <Tag title="Java"><SiJava className="text-lg text-neutral-800"/></Tag>
+                                    <Tag title="Java"><FaJava className="text-lg text-neutral-800"/></Tag>
                                     <Tag title="Python"><SiPython className="text-lg text-neutral-800"/></Tag>
                                     <Tag title="C"><SiC className="text-lg text-neutral-800"/></Tag>
                                     <Tag title="JavaScript"><SiJavascript className="text-lg text-neutral-800"/></Tag>
