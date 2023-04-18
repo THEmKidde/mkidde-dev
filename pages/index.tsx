@@ -19,7 +19,7 @@ export default function Home({ projects }) {
             <div className="bg-slate-50 h-full min-h-screen">
                 <Container className="pt-40 md:pt-44 lg:pt-52">
                     <h1 className="text-5xl  md:text-8xl">Mikkel <br /> Kidde Thomsen</h1>
-                    <h2 className="text-2xl md:text-5xl my-2">Software engineer with a BSc from Aalborg University.</h2>
+                    <h2 className="text-2xl md:text-5xl my-2">Software consultant with a BSc from Aalborg University.</h2>
                     <div className="flex my-6 justify-center lg:justify-start">
                         <Button title="Resumé" onClick={()=>{window.open('Resume.pdf', '_blank')}} />
                         <a href="https://github.com/mKiddeT" target="_blank" className="ml-6 mr-3 text-5xl text-neutral-700 hover:text-cyan-500 duration-100">

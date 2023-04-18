@@ -30,14 +30,20 @@ p, h1, h2, h3, h4, h5, h6, label {
     overflow-y: auto;
     scrollbar-gutter: stable;
 }
+
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 4px;
 }
   
 /* Track */
 ::-webkit-scrollbar-track {
+    margin-top: 64px;
     background: #f1f1f1;
+}
+
+.project-frame::-webkit-scrollbar-track {
+    margin-top: 0px;
 }
   
 /* Handle */
@@ -54,5 +60,5 @@ p, h1, h2, h3, h4, h5, h6, label {
 }
 
 .inner-shadow {
-    mask-image: linear-gradient(to bottom, black calc(100% - 48px), transparent 100%);
+    mask-image: linear-gradient(to bottom, black calc(100% - 40px), transparent 100%);
 }
